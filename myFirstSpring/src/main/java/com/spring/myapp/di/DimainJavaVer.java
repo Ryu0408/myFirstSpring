@@ -1,5 +1,6 @@
 package com.spring.myapp.di;
 
+import com.spring.myapp.di.classfile.Broadcast;
 import com.spring.myapp.di.classfile.Singer;
 import com.spring.myapp.di.classfile.Stage;
 
@@ -15,9 +16,11 @@ public class DimainJavaVer {
 
 		Singer singer = new Singer();
 		Stage stage = new Stage(singer);
+		Broadcast broadcast = new Broadcast(stage);
 		
 		singer.sing();
 		stage.perform();
+		broadcast.broad();
 
 	}
 
