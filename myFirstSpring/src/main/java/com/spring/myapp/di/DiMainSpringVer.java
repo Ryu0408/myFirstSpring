@@ -10,8 +10,7 @@ public class DiMainSpringVer {
 	public static void main(String[] args) {
 		GenericXmlApplicationContext context = new GenericXmlApplicationContext
 				("file:src/main/webapp/WEB-INF/spring/root-context.xml");
-		Stage stage = context.getBean("stage",Stage.class);
-		stage.perform();
+
 
 		/*
 		 * 문제

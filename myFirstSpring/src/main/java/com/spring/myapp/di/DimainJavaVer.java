@@ -1,7 +1,7 @@
 package com.spring.myapp.di;
 
 import com.spring.myapp.di.classfile.Broadcast;
-import com.spring.myapp.di.classfile.Singer;
+import com.spring.myapp.di.classfile.Ballad;
 import com.spring.myapp.di.classfile.Stage;
 
 public class DimainJavaVer {
@@ -14,7 +14,7 @@ public class DimainJavaVer {
 		 * 그 다음에는 Singger가 단독으로 노래를 부르는 상황을 코드로 구현하세요.
 		 */
 
-		Singer singer = new Singer();
+		Ballad singer = new Ballad();
 		Stage stage = new Stage(singer);
 		Broadcast broadcast = new Broadcast(stage);
 		
