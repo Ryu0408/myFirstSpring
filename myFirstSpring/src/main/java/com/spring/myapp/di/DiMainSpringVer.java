@@ -22,8 +22,15 @@ public class DiMainSpringVer {
 		 * 그다음 Stage의 perform()메서드를 이어서 호출합니다.
 		 */
 		
-		Broadcast broadcast = context.getBean("broadcast",Broadcast.class);
-		broadcast.broad();
+//		Broadcast broadcast = context.getBean("broadcast",Broadcast.class);
+//		broadcast.broad();
+		Stage stage1 = context.getBean("stage1",Stage.class);
+		stage1.perform();
+		
+		Stage stage2 = context.getBean("stage2",Stage.class);
+		stage2.perform();
+		
+		
 		context.close();
 	}
 

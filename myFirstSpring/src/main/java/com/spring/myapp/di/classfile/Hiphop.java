@@ -2,7 +2,7 @@ package com.spring.myapp.di.classfile;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Hiphop implements Singer{
 	
 	@Override
