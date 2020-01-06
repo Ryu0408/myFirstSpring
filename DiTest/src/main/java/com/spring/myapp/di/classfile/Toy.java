@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Toy {
 	
 	@Autowired
-	@Qualifier("DuraBattery")
+	//@Qualifier("DuraBattery")
 	IBattery battery;
 	
 	public void playToy() {
