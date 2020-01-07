@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MyappController {
@@ -14,7 +15,8 @@ public class MyappController {
 	}
 	
 	@RequestMapping(value="goB", method= {RequestMethod.POST, RequestMethod.GET})
-	public String goB(Model model) {
+	public String goB(@RequestParam("getnum") int number,Model model) {
+		System.out.println(number);
 		return "B";
 	}
 }
