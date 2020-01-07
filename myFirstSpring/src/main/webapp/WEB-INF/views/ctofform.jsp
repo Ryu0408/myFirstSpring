@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action ="goC" method = "get">
-		<input type = "number" step="0.1"name = "celsius" required>
+		<input type = "number" step="0.1" name = "celsius" required>
 		<input type = "submit" value="온도변환">
 	</form>
 </body>
