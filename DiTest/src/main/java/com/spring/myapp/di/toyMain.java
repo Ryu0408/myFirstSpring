@@ -13,8 +13,11 @@ public class toyMain {
 				("file:src/main/webapp/WEB-INF/spring/root-context.xml");
 		
 		
-		Toy toy = context.getBean("toy",Toy.class);
-		toy.playToy();
+		Toy toy1 = context.getBean("toy1",Toy.class);
+		toy1.playToy();
+		
+		Toy toy2 = context.getBean("toy2",Toy.class);
+		toy2.playToy();
 		context.close();
 
 	}
