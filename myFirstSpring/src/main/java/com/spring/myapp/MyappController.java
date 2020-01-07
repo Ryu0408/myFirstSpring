@@ -15,8 +15,8 @@ public class MyappController {
 	}
 	
 	@RequestMapping(value="goB", method= {RequestMethod.POST, RequestMethod.GET})
-	public String goB(@RequestParam("getnum") int number,Model model) {
-		System.out.println(number);
+	public String goB(int getnum,Model model) {
+		System.out.println(getnum);
 		return "B";
 	}
 }
