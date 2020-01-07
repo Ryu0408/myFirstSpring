@@ -9,8 +9,7 @@ public class DiMainSpringVer {
 
 	public static void main(String[] args) {
 		
-		String[] path = {"file:src/main/webapp/WEB-INF/spring/root-context.xml",
-				"file:src/main/webapp/WEB-INF/spring/root-context2.xml"};
+		String[] path = {"file:src/main/webapp/WEB-INF/spring/root-*.xml"};
 		GenericXmlApplicationContext context = new GenericXmlApplicationContext
 				(path);
 
