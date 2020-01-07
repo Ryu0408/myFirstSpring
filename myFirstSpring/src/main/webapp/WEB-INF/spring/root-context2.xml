@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ballad" class="com.spring.myapp.di.classfile.Ballad"/>
+		
+	<bean id="stage2" class="com.spring.myapp.di.classfile.Stage">
+	<constructor-arg ref="ballad"/>
+	</bean>
+		
+	<bean id="broadcast2" class="com.spring.myapp.di.classfile.Broadcast">
+	<constructor-arg ref="stage2"/>
+	</bean>
+		
+</beans>

@@ -9,16 +9,20 @@
 	
 	
 <!-- 	<context:component-scan base-package="com.spring.myapp.di.classfile"/>  -->
-	<bean id="ballad" class="com.spring.myapp.di.classfile.Ballad"/>
+
+	<!-- 경로설정 root-context2.xml -->
+	<import resource= "file:src/main/webapp/WEB-INF/spring/root-context2.xml"/>
+	
 	<bean id="hiphop" class="com.spring.myapp.di.classfile.Hiphop"/>
 	
 	<bean id="stage1" class="com.spring.myapp.di.classfile.Stage">
 	<constructor-arg ref="hiphop"/>
 	</bean>
 	
-	<bean id="stage2" class="com.spring.myapp.di.classfile.Stage">
-	<constructor-arg ref="ballad"/>
+	<bean id="broadcast1" class="com.spring.myapp.di.classfile.Broadcast">
+	<constructor-arg ref="stage1"/>
 	</bean>
 	
+
 	
 </beans>

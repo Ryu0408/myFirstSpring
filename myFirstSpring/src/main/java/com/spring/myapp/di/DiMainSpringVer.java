@@ -30,6 +30,12 @@ public class DiMainSpringVer {
 		Stage stage2 = context.getBean("stage2",Stage.class);
 		stage2.perform();
 		
+		Broadcast broadcast1 = context.getBean("broadcast1",Broadcast.class);
+		broadcast1.broad();
+		
+		Broadcast broadcast2 = context.getBean("broadcast2",Broadcast.class);
+		broadcast2.broad();
+		
 		
 		context.close();
 	}
