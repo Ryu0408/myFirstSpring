@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-입력받은 파라미터의 값 : 
+<h1>입력받은 파라미터의 값 : <i>${getnum }</i></h1>
 </body>
 </html>
