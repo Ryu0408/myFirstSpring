@@ -13,7 +13,7 @@ public class MyappController {
 		return "A";
 	}
 	
-	@RequestMapping(value="goB", method=RequestMethod.POST)
+	@RequestMapping(value="goB", method= {RequestMethod.POST, RequestMethod.GET})
 	public String goB(Model model) {
 		return "B";
 	}
