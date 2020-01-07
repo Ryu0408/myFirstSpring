@@ -8,8 +8,11 @@ import com.spring.myapp.di.classfile.Stage;
 public class DiMainSpringVer {
 
 	public static void main(String[] args) {
+		
+		String[] path = {"file:src/main/webapp/WEB-INF/spring/root-context.xml",
+				"file:src/main/webapp/WEB-INF/spring/root-context2.xml"};
 		GenericXmlApplicationContext context = new GenericXmlApplicationContext
-				("file:src/main/webapp/WEB-INF/spring/root-context.xml");
+				(path);
 
 
 		/*
