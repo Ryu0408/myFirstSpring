@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.spring.vo.SampleVO;
+import com.spring.vo.SampleVOlist;
 
 @Controller
 public class MyappController {
@@ -92,4 +93,11 @@ public class MyappController {
 	 * 단 결과를 보여주는 showvo는 POST방식에만 반응합니다.
 	 * 따라서 form으로 이동하는 showvo파일을 작성해 결과창으로 자료를 전송할 수있도록 코드를 작성해보세요
 	 */
+	
+	@RequestMapping(value ="volist", method= RequestMethod.GET)
+	public String showListVo(SampleVOlist list, Model model){
+		System.out.println(list);
+		model.addAttribute("list",list);
+		return "vo/volist";
+	}
 }
