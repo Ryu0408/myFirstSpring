@@ -1,5 +1,7 @@
 package com.spring.myapp;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -63,5 +65,11 @@ public class MyappController {
 	public String pathTest(@PathVariable int page, Model model) {
 		model.addAttribute("page",page);
 		return "path";
+	}
+	
+	@RequestMapping(value = "getlist", method= {RequestMethod.POST, RequestMethod.GET})
+	public String listTest(@RequestParam("array") ArrayList<String> array, Model model) {
+		model.addAttribute("array",array);
+		return "getlist";
 	}
 }
