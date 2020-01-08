@@ -49,9 +49,7 @@ public class MyappController {
 	 */
 	
 	@RequestMapping(value = "bmiform",  method= {RequestMethod.POST, RequestMethod.GET})
-	public String gobmiform(Model model) {
-		return "bmiform";
-	}
+	public void gobmiform(Model model) {}
 	
 	@RequestMapping(value = "goBMI", method= {RequestMethod.POST, RequestMethod.GET})
 	public String gobmi(double kg, double cm, Model model) {
