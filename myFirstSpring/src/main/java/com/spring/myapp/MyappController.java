@@ -75,9 +75,21 @@ public class MyappController {
 		return "getlist";
 	}
 	
-	@RequestMapping(value = "showvo", method = {RequestMethod.GET})
-	public String voTest(SampleVO samplevo, Model model) {
+	@RequestMapping(value = "vo", method = {RequestMethod.POST})
+	public String showvo(SampleVO samplevo, Model model) {
 		model.addAttribute("samplevo", samplevo);
 		return "vo/showvo";
 	}
+	
+	@RequestMapping(value = "vo", method = {RequestMethod.GET})
+	public String showvo(Model model) {
+		return "vo/form";
+	}
+	/*
+	 * 문제
+	 * 
+	 * 현재 vo라는 주소로 접근했을 때 SampleVO 입력에 따른 결과를 볼 수 있는 showvo 메서드를 호출하도록 설계했습니다.
+	 * 단 결과를 보여주는 showvo는 POST방식에만 반응합니다.
+	 * 따라서 form으로 이동하는 showvo파일을 작성해 결과창으로 자료를 전송할 수있도록 코드를 작성해보세요
+	 */
 }
