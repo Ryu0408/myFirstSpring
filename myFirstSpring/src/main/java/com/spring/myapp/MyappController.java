@@ -34,8 +34,29 @@ public class MyappController {
 		return "C";
 	}
 	
-	@RequestMapping(value="ctofform")
+	@RequestMapping(value="ctofform",  method= {RequestMethod.POST, RequestMethod.GET})
 	public String goForm1(Model model) {
 		return "ctofform";
+	}
+	
+	/*
+	 * 문제
+	 * MyappController 파일에 BMI지수를 측정해주는 프로그램을 만들겠습니다
+	 * BMI 공식 = 체중 / 키(M)의 제곱
+	 * 키는 M 이기 떄문에 예를들어 175cm로 입력시 1.75로 변환되어야 합니다.
+	 * form과 실제로 입력했을때 결과가 나올 페이지 두개를 모두 작성하세요/.
+	 */
+	
+	@RequestMapping(value = "bmiform",  method= {RequestMethod.POST, RequestMethod.GET})
+	public String gobmiform(Model model) {
+		return "bmiform";
+	}
+	
+	@RequestMapping(value = "goBMI", method= {RequestMethod.POST, RequestMethod.GET})
+	public String gobmi(double kg, double cm, Model model) {
+		double m = cm/100;
+		double bmi = kg / (m*m);
+		model.addAttribute("bmi",bmi);
+		return "goBMI";
 	}
 }
