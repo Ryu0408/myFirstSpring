@@ -2,6 +2,7 @@ package com.spring.myapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +23,7 @@ public class MyappController {
 	
 	/*
 	 * 문제
-	 * MyappController 파일에 섭씨 온도를 입력할 경우 화씨 온도로 바궈서 출력해주는 페이지를 작성해보도록 하겠습니다.
+	 * MyappController 파일에 섭씨 온도를 입력할 경우 화씨 ㅜㅜ온도로 바궈서 출력해주는 페이지를 작성해보도록 하겠습니다.
 	 * 화씨 -> 섭씨 변환 공식은
 	 * 섭씨온도 = (화씨온도 -32) / 1.8입니다.
 	 */
@@ -58,5 +59,11 @@ public class MyappController {
 		double bmi = kg / (m*m);
 		model.addAttribute("bmi",bmi);
 		return "goBMI";
+	}
+	
+	@RequestMapping(value = "pathtest/{page}")
+	public String pathTest(@PathVariable int page, Model model) {
+		model.addAttribute("page",page);
+		return "path";
 	}
 }
