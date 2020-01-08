@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.spring.vo.SampleVO;
+
 @Controller
 public class MyappController {
 	
@@ -71,5 +73,11 @@ public class MyappController {
 	public String listTest(@RequestParam("array") ArrayList<String> array, Model model) {
 		model.addAttribute("array",array);
 		return "getlist";
+	}
+	
+	@RequestMapping(value = "showvo", method = {RequestMethod.GET})
+	public String voTest(SampleVO samplevo, Model model) {
+		model.addAttribute("samplevo", samplevo);
+		return "vo/showvo";
 	}
 }
