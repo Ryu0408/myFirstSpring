@@ -2,7 +2,6 @@ package com.spring.myapp.hr.vo;
 
 import java.sql.Date;
 
-import org.springframework.stereotype.Repository;
 
 
 public class EmployeeVO {
