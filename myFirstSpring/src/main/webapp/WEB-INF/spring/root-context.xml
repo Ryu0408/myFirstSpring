@@ -12,6 +12,16 @@
 
 	<!-- 경로설정 root-context2.xml -->
 <!-- 	<import resource= "file:src/main/webapp/WEB-INF/spring/root-context2.xml"/> -->
+
+	<context:property-placeholder location="classpath:database/jdbc.properties" /> 
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"> 
+		<property name="driverClassName" value="${jdbc.driverClassName}" /> 
+		<property name="url" value="${jdbc.url}" /> 
+		<property name="username" value="${jdbc.username}" /> 
+		<property name="password" value="${jdbc.password}" /> 
+	</bean>
+	
 	
 	<bean id="hiphop" class="com.spring.myapp.di.classfile.Hiphop"/>
 	
