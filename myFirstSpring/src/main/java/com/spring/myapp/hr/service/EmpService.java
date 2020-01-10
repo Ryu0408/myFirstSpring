@@ -1,10 +1,13 @@
 package com.spring.myapp.hr.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.spring.myapp.hr.dao.IEmpDAO;
 import com.spring.myapp.hr.service.IEmpService;
+import com.spring.myapp.hr.vo.EmployeeVO;
 
 @Repository
 public class EmpService implements IEmpService {
@@ -20,5 +23,10 @@ public class EmpService implements IEmpService {
 	@Override
 	public int getEmpCount(int deptid){
 		return empDAO.getEmpCount(deptid);
+	}
+
+	@Override
+	public List<EmployeeVO> getEmplist() {
+		return empDAO.getEmplist();
 	}
 }
