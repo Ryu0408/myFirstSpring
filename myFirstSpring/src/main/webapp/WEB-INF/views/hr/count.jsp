@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-${count }
+우리 회사의 총 인원은 ${count }명입니다.
 
 </body>
 </html>

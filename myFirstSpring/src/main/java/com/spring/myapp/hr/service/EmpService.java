@@ -16,4 +16,9 @@ public class EmpService implements IEmpService {
 	public int getEmpCount() {
 		return empDAO.getEmpCount();
 	}
+	
+	@Override
+	public int getEmpCount(int deptid){
+		return empDAO.getEmpCount(deptid);
+	}
 }
