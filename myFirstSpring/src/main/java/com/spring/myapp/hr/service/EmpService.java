@@ -29,4 +29,9 @@ public class EmpService implements IEmpService {
 	public List<EmployeeVO> getEmplist() {
 		return empDAO.getEmplist();
 	}
+
+	@Override
+	public EmployeeVO getEmpList(int empid) {
+		return empDAO.getEmpList(empid);
+	}
 }

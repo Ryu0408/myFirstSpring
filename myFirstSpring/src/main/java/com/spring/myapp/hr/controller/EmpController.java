@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,5 +37,16 @@ public class EmpController {
 		//model.addAttribute("list",list);
 		model.addAttribute("list", empService.getEmplist());
 		return "hr/list";
+	}
+	
+	/*
+	 * hr/다음에 @PathVariable을 이용해서 employeeId를 처리해주세요
+	 * getEmpList 메서드를 호출해주세요
+	 * view.jsp 파일에서 우선 출력만 간단하게 해주세요.
+	 */
+	@RequestMapping(value = "hr/{employeeId}", method = RequestMethod.GET)
+	public String getEmpInfo(@PathVariable int employeeId, Model model) {
+		model.addAttribute("emp", empService.getEmpList(employeeId));
+		return "hr/view";
 	}
 }

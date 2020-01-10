@@ -25,7 +25,7 @@
 		</tr>
 		<c:forEach var="emp" items="${list }">
 		<tr>
-			<th>${emp.employeeId }</th>
+			<th><a href="/hr/${emp.employeeId}">${emp.employeeId }</a></th>
 			<th>${emp.firstName}</th>
 			<th>${emp.lastName}</th>
 			<th>${emp.email}</th>

@@ -56,4 +56,12 @@ public class EmpDAO implements IEmpDAO{
 		String sql = "select * from employees";
 		return jdbcTemplate.query(sql, new EmpMapper());
 	}
+
+	@Override
+	public EmployeeVO getEmpList(int empid) {
+		String sql = "select * from employees where EMPLOYEE_ID = ?";
+		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empid);
+	}
+	
+	
 }
