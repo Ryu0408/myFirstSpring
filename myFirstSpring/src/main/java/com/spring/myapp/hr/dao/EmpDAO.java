@@ -63,5 +63,27 @@ public class EmpDAO implements IEmpDAO{
 		return jdbcTemplate.queryForObject(sql, new EmpMapper(), empid);
 	}
 	
-	
+	/*
+	 * UPDATE 구문 작성 시 HIRE_DATE를 집어넣는 구간에는 ?대신 SYSDATE를 넣어주세요
+	 * 나머지 경우는 모두 preparedstatement구문으로 작성합니다.
+	 */
+	@Override
+	public void insertEmp(EmployeeVO emp) {
+		String sql = "insert into employees (employee_id, "
+				+ "first_name, last_name, email, phone_number, "
+				+ "hire_date, jod_id, salary, commission_pct, "
+				+ "manager_id, department_id"
+				+ "values(?,?,?,?,?,SYSDATE,?,?,?,?,?)";
+		jdbcTemplate.update(sql,
+				emp.getEmployeeId(),
+				emp.getFirstName(),
+				emp.getLastName(),
+				emp.getEmail(),
+				emp.getPhoneNumber(),
+				emp.getJobId(),
+				emp.getSalary(),
+				emp.getCommissionPct(),
+				emp.getManagerId(),
+				emp.getDepartmentId());
+	}
 }

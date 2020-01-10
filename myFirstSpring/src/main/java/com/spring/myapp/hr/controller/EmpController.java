@@ -49,4 +49,15 @@ public class EmpController {
 		model.addAttribute("emp", empService.getEmpList(employeeId));
 		return "hr/view";
 	}
+	
+	/*
+	 * insertEmp메서드를 만들어주세요
+	 * 이 메서드는 form으로 연결된 메서드이기 떄문에 따로 파라미터를 입력바딪 않고
+	 * 메서드는 GET방식을 사용합니다.
+	 * 접속주소는 /hr/insert를 사용합니다.
+	 */
+	@RequestMapping(value = "hr/insert", method = RequestMethod.GET)
+	public String insertEmp(Model model) {
+		return "hr/insertform";
+	}
 }

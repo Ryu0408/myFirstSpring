@@ -34,4 +34,9 @@ public class EmpService implements IEmpService {
 	public EmployeeVO getEmpList(int empid) {
 		return empDAO.getEmpList(empid);
 	}
+
+	@Override
+	public void insertEmp(EmployeeVO emp) {
+		empDAO.insertEmp(emp);
+	}
 }
