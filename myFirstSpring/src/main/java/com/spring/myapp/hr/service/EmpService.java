@@ -1,6 +1,7 @@
 package com.spring.myapp.hr.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -39,4 +40,23 @@ public class EmpService implements IEmpService {
 	public void insertEmp(EmployeeVO emp) {
 		empDAO.insertEmp(emp);
 	}
+
+	
+	////////////////////////////////
+	@Override
+	public List<Map<String, Object>> getAllDepId() {
+		return empDAO.getAllDepId();
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllManagerId() {
+		return null;
+	}
+	
+
 }

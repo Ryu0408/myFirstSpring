@@ -3,6 +3,7 @@ package com.spring.myapp.hr.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -72,7 +73,7 @@ public class EmpDAO implements IEmpDAO{
 		String sql = "insert into employees (employee_id, "
 				+ "first_name, last_name, email, phone_number, "
 				+ "hire_date, jod_id, salary, commission_pct, "
-				+ "manager_id, department_id"
+				+ "manager_id, department_id) "
 				+ "values(?,?,?,?,?,SYSDATE,?,?,?,?,?)";
 		jdbcTemplate.update(sql,
 				emp.getEmployeeId(),
@@ -85,5 +86,25 @@ public class EmpDAO implements IEmpDAO{
 				emp.getCommissionPct(),
 				emp.getManagerId(),
 				emp.getDepartmentId());
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllDepId() {
+		String sql = "SELECT department_id as departmentId, "
+				+ "department_name as departmentName "
+				+ "from departments";
+		return jdbcTemplate.queryForList(sql);
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllManagerId() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

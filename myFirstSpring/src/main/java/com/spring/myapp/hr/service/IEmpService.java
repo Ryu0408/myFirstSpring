@@ -1,6 +1,7 @@
 package com.spring.myapp.hr.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.spring.myapp.hr.vo.EmployeeVO;
 
@@ -11,7 +12,10 @@ public interface IEmpService {
 	List<EmployeeVO> getEmplist();
 	EmployeeVO getEmpList(int empid);
 	void insertEmp(EmployeeVO emp);
-
-
+	
+	////////////////////////////////////
+	List<Map<String, Object>> getAllDepId();
+	List<Map<String, Object>> getAllJobId();
+	List<Map<String, Object>> getAllManagerId();
 
 }

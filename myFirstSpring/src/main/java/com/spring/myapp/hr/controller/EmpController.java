@@ -58,6 +58,7 @@ public class EmpController {
 	 */
 	@RequestMapping(value = "hr/insert", method = RequestMethod.GET)
 	public String insertEmp(Model model) {
+		model.addAttribute("deptId",empService.getAllDepId());
 		return "hr/insertform";
 	}
 }
