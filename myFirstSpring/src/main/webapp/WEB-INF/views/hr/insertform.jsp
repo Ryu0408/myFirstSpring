@@ -13,28 +13,28 @@
 	<form action="#" method = "post">
 		<tr>
 			<th>EMPLOYEE_ID</th>
-			<td><input type="number" name="employeeId"></td>
+			<td><input type="number" name="employeeId" required></td>
 			<!-- VO내부와 일치하는 것으로 name을 만들어줘야함. -->
 		</tr>
 		<tr>
 			<th>FIRST_NAME</th>
-			<td><input type="text" name="firstName"></td>
+			<td><input type="text" name="firstName" required></td>
 		</tr>
 		<tr>
 			<th>LAST_NAME</th>
-			<td><input type="text" name="lastName"></td>
+			<td><input type="text" name="lastName" required></td>
 		</tr>
 		<tr>
 			<th>EMAIL</th>
-			<td><input type="text" name="email"></td>
+			<td><input type="text" name="email" required></td>
 		</tr>
 		<tr>
 			<th>PHONE_NUMBER</th>
-			<td><input type="text" name="phonenumber"></td>
+			<td><input type="text" name="phonenumber" required></td>
 		</tr>
 		<tr>
 			<th>HIRE_DATE</th>
-			<td><input type="date" name="hireDate"></td>
+			<td><input type="date" name="hireDate" required></td>
 		</tr>	
 		<tr>
 			<th>JOB_ID</th>
@@ -50,12 +50,12 @@
 		</tr>
 		<tr>
 			<th>SALARY</th>
-			<td><input type="number" name="salary"></td>
+			<td><input type="number" name="salary" required></td>
 		</tr>	
 		<tr>
 			<th>COMMISSION_PCT</th>
 			<td><input type="number" name="commissionPct" 
-			step="0.1" min = "0" max="0.99"></td>
+			step="0.1" min = "0" max="0.99" required></td>
 		</tr>
 		<tr>
 			<th>MANAGER_ID</th>
