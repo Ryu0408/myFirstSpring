@@ -92,14 +92,16 @@ public class EmpDAO implements IEmpDAO{
 	public List<Map<String, Object>> getAllDepId() {
 		String sql = "SELECT department_id as departmentId, "
 				+ "department_name as departmentName "
-				+ "from departments";
+				+ "from departments order by department_name";
 		return jdbcTemplate.queryForList(sql);
 	}
 
 	@Override
 	public List<Map<String, Object>> getAllJobId() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "SELECT job_id as jobId, "
+				+ "job_title as jobTitle "
+				+ "from jobs order by job_title";
+		return jdbcTemplate.queryForList(sql);
 	}
 
 	@Override
@@ -108,7 +110,7 @@ public class EmpDAO implements IEmpDAO{
 					+"d.manager_id as managerId, e.first_name as firstName "
 					+"FROM departments d join employees e "
 					+"on d.manager_id = e.employee_id "
-					+"order by d.manager_id";
+					+"order by e.first_name";
 		return jdbcTemplate.queryForList(sql);
 	}
 }

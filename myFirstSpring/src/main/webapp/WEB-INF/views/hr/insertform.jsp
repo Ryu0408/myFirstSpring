@@ -38,7 +38,15 @@
 		</tr>	
 		<tr>
 			<th>JOB_ID</th>
-			<td><input type="text" name="jobId"></td>
+			<td>
+				<select name="jobId">
+					<c:forEach var="job" items="${jobId }">
+						<option value="${job.jobId}">
+						${job.jobTitle}
+						</option>
+					</c:forEach>
+				</select>
+			</td>
 		</tr>
 		<tr>
 			<th>SALARY</th>
@@ -58,7 +66,8 @@
 						${manager.firstName}
 						</option>
 					</c:forEach>
-				</select></td>
+				</select>
+			</td>
 				
 		</tr>
 		<tr>

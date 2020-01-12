@@ -60,6 +60,7 @@ public class EmpController {
 	public String insertEmp(Model model) {
 		model.addAttribute("deptId",empService.getAllDepId());
 		model.addAttribute("managerId", empService.getAllManagerId());
+		model.addAttribute("jobId",empService.getAllJobId());
 		return "hr/insertform";
 	}
 }

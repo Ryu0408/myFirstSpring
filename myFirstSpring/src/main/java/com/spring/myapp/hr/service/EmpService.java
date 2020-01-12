@@ -50,7 +50,7 @@ public class EmpService implements IEmpService {
 
 	@Override
 	public List<Map<String, Object>> getAllJobId() {
-		return null;
+		return empDAO.getAllJobId();
 	}
 
 	@Override
