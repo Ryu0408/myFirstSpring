@@ -51,7 +51,15 @@
 		</tr>
 		<tr>
 			<th>MANAGER_ID</th>
-			<td><input type="number" name="managerId"></td>
+			<td>
+				<select name="managerId">
+					<c:forEach var="manager" items="${managerId }">
+						<option value="${manager.managerId}">
+						${manager.firstName}
+						</option>
+					</c:forEach>
+				</select></td>
+				
 		</tr>
 		<tr>
 			<th>DEPARTMENT_ID</th>
@@ -65,6 +73,7 @@
 				</select>
 			</td>
 		</tr>
+		<input type ="submit" value="제출">
 	</form>
 	</table>
 </body>

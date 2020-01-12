@@ -104,7 +104,11 @@ public class EmpDAO implements IEmpDAO{
 
 	@Override
 	public List<Map<String, Object>> getAllManagerId() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql = "select "
+					+"d.manager_id as managerId, e.first_name as firstName "
+					+"FROM departments d join employees e "
+					+"on d.manager_id = e.employee_id "
+					+"order by d.manager_id";
+		return jdbcTemplate.queryForList(sql);
 	}
 }
