@@ -57,6 +57,11 @@ public class EmpService implements IEmpService {
 	public List<Map<String, Object>> getAllManagerId() {
 		return empDAO.getAllManagerId();
 	}
+
+	@Override
+	public void deleteEmp(int empid, String email) {
+		empDAO.deleteEmp(empid, email);
+	}
 	
 
 }

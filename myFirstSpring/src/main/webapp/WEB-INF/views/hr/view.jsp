@@ -55,7 +55,7 @@
 		</tr>
 	</table>
 	<a href="#">수정하기</a>
-	<a href="#">삭제하기</a>
+	<a href="/hr/delete?empid=${emp.employeeId }">삭제하기</a>
 	<a href="list">목록으로 가기</a>
 </body>
 </html>

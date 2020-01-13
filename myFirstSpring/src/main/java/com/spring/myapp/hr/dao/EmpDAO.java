@@ -113,4 +113,10 @@ public class EmpDAO implements IEmpDAO{
 					+"order by e.first_name";
 		return jdbcTemplate.queryForList(sql);
 	}
+
+	@Override
+	public void deleteEmp(int empid, String email) {
+		String sql = "delete FROM employees WHERE employee_id=? and email=?";
+		jdbcTemplate.update(sql, empid, email);
+	}
 }

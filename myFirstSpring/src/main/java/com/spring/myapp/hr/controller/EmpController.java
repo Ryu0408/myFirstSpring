@@ -67,6 +67,18 @@ public class EmpController {
 	@RequestMapping(value = "hr/insert", method = RequestMethod.POST)
 	public String insertEmp(EmployeeVO emp, Model model) {
 		empService.insertEmp(emp);
-		return "hr/list";
+		return "redirect:list";
+	}
+	
+	@RequestMapping(value = "hr/delete", method = RequestMethod.GET)
+	public String deleteEmp(int empid, Model model) {
+		model.addAttribute("emp", empService.getEmpList(empid));
+		return "hr/deleteform";
+	}
+	
+	@RequestMapping(value = "hr/delete", method = RequestMethod.POST)
+	public String deleteEmp(int empid, String email, Model model) {
+		empService.deleteEmp(empid, email);
+		return "redirect:list";
 	}
 }

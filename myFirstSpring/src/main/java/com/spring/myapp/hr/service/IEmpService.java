@@ -12,6 +12,8 @@ public interface IEmpService {
 	List<EmployeeVO> getEmplist();
 	EmployeeVO getEmpList(int empid);
 	void insertEmp(EmployeeVO emp);
+	void deleteEmp(int empid, String email);
+
 	
 	////////////////////////////////////
 	List<Map<String, Object>> getAllDepId();
