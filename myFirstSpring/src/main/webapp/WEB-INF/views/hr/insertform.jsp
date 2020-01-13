@@ -10,7 +10,7 @@
 <body>
 <h1>신규 사원 등록</h1>
 	<table border="1">
-	<form action="#" method = "post">
+	<form action="insert" method = "post">
 		<tr>
 			<th>EMPLOYEE_ID</th>
 			<td><input type="number" name="employeeId" required></td>

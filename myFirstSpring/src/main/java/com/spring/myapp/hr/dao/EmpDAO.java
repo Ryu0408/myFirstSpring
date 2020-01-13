@@ -72,7 +72,7 @@ public class EmpDAO implements IEmpDAO{
 	public void insertEmp(EmployeeVO emp) {
 		String sql = "insert into employees (employee_id, "
 				+ "first_name, last_name, email, phone_number, "
-				+ "hire_date, jod_id, salary, commission_pct, "
+				+ "hire_date, job_id, salary, commission_pct, "
 				+ "manager_id, department_id) "
 				+ "values(?,?,?,?,?,SYSDATE,?,?,?,?,?)";
 		jdbcTemplate.update(sql,

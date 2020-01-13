@@ -63,4 +63,10 @@ public class EmpController {
 		model.addAttribute("jobId",empService.getAllJobId());
 		return "hr/insertform";
 	}
+	
+	@RequestMapping(value = "hr/insert", method = RequestMethod.POST)
+	public String insertEmp(EmployeeVO emp, Model model) {
+		empService.insertEmp(emp);
+		return "hr/list";
+	}
 }
