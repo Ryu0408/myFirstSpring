@@ -119,4 +119,25 @@ public class EmpDAO implements IEmpDAO{
 		String sql = "delete FROM employees WHERE employee_id=? and email=?";
 		jdbcTemplate.update(sql, empid, email);
 	}
+
+	@Override
+	public void updateEmp(EmployeeVO emp) {
+		String sql = "UPDATE employees "
+				+"SET first_name=?. last_name=?, email=?, "
+				+"phone_number=?, hire_date=?, job_id=?, "
+				+"salary=?, commission_pct=?, manager_id=?, " 
+				+"department_id=? WHERE employee_id=?";
+		jdbcTemplate.update(sql,
+				emp.getEmployeeId(),
+				emp.getFirstName(),
+				emp.getLastName(),
+				emp.getEmail(),
+				emp.getPhoneNumber(),
+				emp.getJobId(),
+				emp.getSalary(),
+				emp.getCommissionPct(),
+				emp.getManagerId(),
+				emp.getDepartmentId());
+				
+	}
 }

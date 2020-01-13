@@ -13,6 +13,7 @@ public interface IEmpService {
 	EmployeeVO getEmpList(int empid);
 	void insertEmp(EmployeeVO emp);
 	void deleteEmp(int empid, String email);
+	void updateEmp(EmployeeVO emp);
 
 	
 	////////////////////////////////////

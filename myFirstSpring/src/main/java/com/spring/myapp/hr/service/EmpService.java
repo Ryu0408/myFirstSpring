@@ -62,6 +62,12 @@ public class EmpService implements IEmpService {
 	public void deleteEmp(int empid, String email) {
 		empDAO.deleteEmp(empid, email);
 	}
+
+	@Override
+	public void updateEmp(EmployeeVO emp) {
+		empDAO.updateEmp(emp);
+		
+	}
 	
 
 }

@@ -81,4 +81,11 @@ public class EmpController {
 		empService.deleteEmp(empid, email);
 		return "redirect:list";
 	}
+	
+	@RequestMapping(value = "hr/update", method = RequestMethod.GET)
+	public String updateEmp(int empid, Model model) {
+		EmployeeVO emp = empService.getEmpList(empid);
+		model.addAttribute("emp", emp);
+		return "hr/updateform";
+	}
 }
