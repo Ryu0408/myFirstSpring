@@ -12,12 +12,12 @@ public interface IEmpDAO {
 	int getEmpCount();
 	int getEmpCount(@Param("deptid") int deptid);
 	List<EmployeeVO> getEmplist();
-	EmployeeVO getEmpList(int empid);
+	EmployeeVO getEmpList(@Param("empid") int empid);
 	void insertEmp(EmployeeVO emp);
 	
-	void deleteJobHistory(int empid);
+	void deleteJobHistory(@Param("empid") int empid);
 	
-	void deleteEmp(int empid, String email);
+	void deleteEmp(@Param("empid") int empid, @Param("email") String email);
 	void updateEmp(EmployeeVO emp);
 	
 	////////////////////////////////////

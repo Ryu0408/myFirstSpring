@@ -60,6 +60,7 @@ public class EmpService implements IEmpService {
 
 	@Override
 	public void deleteEmp(int empid, String email) {
+		empDAO.deleteJobHistory(empid);
 		empDAO.deleteEmp(empid, email);
 	}
 
@@ -69,10 +70,7 @@ public class EmpService implements IEmpService {
 		
 	}
 
-	@Override
-	public void deleteJobHistory(int empid) {
-		empDAO.deleteJobHistory(empid);
-	}
+
 	
 
 }
