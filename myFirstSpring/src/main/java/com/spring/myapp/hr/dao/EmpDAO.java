@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 
 import com.spring.myapp.hr.vo.EmployeeVO;
 
-@Repository
+//@Repository
 public class EmpDAO implements IEmpDAO{
 	
 	@Autowired
