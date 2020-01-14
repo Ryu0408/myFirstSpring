@@ -17,12 +17,7 @@ xml을 활용한 의존성 주입 코드로 고쳐보세요
 	<bean id = "duraBattery" class="com.spring.myapp.di.classfile.DuraBattery"/>
 	<bean id = "enerBattery" class="com.spring.myapp.di.classfile.EnerBattery"/>
 		
-	<bean id = "toy1" class="com.spring.myapp.di.classfile.Toy">
-	<constructor-arg  ref = "duraBattery"/>
-	</bean>
-	
-	<bean id = "toy2" class="com.spring.myapp.di.classfile.Toy">
-	<constructor-arg ref = "enerBattery"/>
-	</bean>
+
+
 
 </beans>
