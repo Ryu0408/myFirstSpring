@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,9 +40,12 @@
 			<td>
 				<select name="jobId">
 					<c:forEach var="job" items="${jobId }">
-						<option value="${job.jobId}">
-						${job.jobTitle}
-						</option>
+						<c:if test="${emp.jobId == job.jobId }">
+							<option value = "${job.jobId}" selected>${job.jobTitle }</option>
+						</c:if>
+						<c:if test="${emp.jobId != job.jobId }">
+							<option value="${job.jobId}">${job.jobTitle}</option>
+						</c:if>
 					</c:forEach>
 				</select>
 			</td>
@@ -60,9 +64,12 @@
 			<td>
 				<select name="managerId">
 					<c:forEach var="manager" items="${managerId }">
-						<option value="${manager.managerId}">
-						${manager.firstName}
-						</option>
+						<c:if test="${emp.managerId == manager.managerId }">
+							<option value="${manager.managerId}" selected>${manager.firstName}</option>
+						</c:if>
+						<c:if test="${emp.managerId != manager.managerId }">
+							<option value="${manager.managerId}">${manager.firstName}</option>
+						</c:if>
 					</c:forEach>
 				</select>
 			</td>
@@ -73,9 +80,12 @@
 			<td>
 				<select name ="departmentId">
 					<c:forEach var="dept" items="${deptId }">
-						<option value="${dept.departmentId}">
-						${dept.departmentName}
-						</option>
+						<c:if test="${emp.departmentId == dept.departmentId }">
+							<option value="${dept.departmentId}" selected>${dept.departmentName}</option>
+						</c:if>
+						<c:if test="${emp.departmentId != dept.departmentId }">
+							<option value="${dept.departmentId}">${dept.departmentName}</option>
+						</c:if>
 					</c:forEach>
 				</select>
 			</td>

@@ -123,21 +123,22 @@ public class EmpDAO implements IEmpDAO{
 	@Override
 	public void updateEmp(EmployeeVO emp) {
 		String sql = "UPDATE employees "
-				+"SET first_name=?. last_name=?, email=?, "
+				+"SET first_name=?, last_name=?, email=?, "
 				+"phone_number=?, hire_date=?, job_id=?, "
 				+"salary=?, commission_pct=?, manager_id=?, " 
 				+"department_id=? WHERE employee_id=?";
 		jdbcTemplate.update(sql,
-				emp.getEmployeeId(),
 				emp.getFirstName(),
 				emp.getLastName(),
 				emp.getEmail(),
 				emp.getPhoneNumber(),
+				emp.getHireDate(),
 				emp.getJobId(),
 				emp.getSalary(),
 				emp.getCommissionPct(),
 				emp.getManagerId(),
-				emp.getDepartmentId());
+				emp.getDepartmentId(),
+				emp.getEmployeeId());
 				
 	}
 }
