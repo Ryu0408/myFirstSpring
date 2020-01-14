@@ -78,6 +78,7 @@ public class EmpController {
 	
 	@RequestMapping(value = "hr/delete", method = RequestMethod.POST)
 	public String deleteEmp(int empid, String email, Model model) {
+		empService.deleteJobHistory(empid);
 		empService.deleteEmp(empid, email);
 		return "redirect:list";
 	}

@@ -30,7 +30,7 @@
 		</tr>
 		<tr>
 			<th>PHONE_NUMBER</th>
-			<td><input type="text" name="phonenumber" required></td>
+			<td><input type="text" name="phoneNumber" required></td>
 		</tr>
 		<tr>
 			<th>HIRE_DATE</th>

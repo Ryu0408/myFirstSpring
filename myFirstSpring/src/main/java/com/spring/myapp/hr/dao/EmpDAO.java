@@ -141,4 +141,11 @@ public class EmpDAO implements IEmpDAO{
 				emp.getEmployeeId());
 				
 	}
+
+	@Override
+	public void deleteJobHistory(int empid) {
+		String sql = "DELETE FROM job_history WHERE employee_id=?";
+		jdbcTemplate.update(sql, empid);
+		
+	}
 }

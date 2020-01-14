@@ -68,6 +68,11 @@ public class EmpService implements IEmpService {
 		empDAO.updateEmp(emp);
 		
 	}
+
+	@Override
+	public void deleteJobHistory(int empid) {
+		empDAO.deleteJobHistory(empid);
+	}
 	
 
 }

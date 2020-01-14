@@ -12,7 +12,7 @@
 	<form action="update" method = "post">
 		<tr>
 			<th>EMPLOYEE_ID</th>
-			<td><input type="number" name="employeeId" value="${emp.employeeId }" required></td>
+			<td><input type="number" name="employeeId" value="${emp.employeeId }" readonly></td>
 			<!-- VO내부와 일치하는 것으로 name을 만들어줘야함. -->
 		</tr>
 		<tr>
@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<th>PHONE_NUMBER</th>
-			<td><input type="text" name="phonenumber" value="${emp.phoneNumber }"required></td>
+			<td><input type="text" name="phoneNumber" value="${emp.phoneNumber }"required></td>
 		</tr>
 		<tr>
 			<th>HIRE_DATE</th>

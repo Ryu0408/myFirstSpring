@@ -12,6 +12,9 @@ public interface IEmpDAO {
 	List<EmployeeVO> getEmplist();
 	EmployeeVO getEmpList(int empid);
 	void insertEmp(EmployeeVO emp);
+	
+	void deleteJobHistory(int empid);
+	
 	void deleteEmp(int empid, String email);
 	void updateEmp(EmployeeVO emp);
 	
