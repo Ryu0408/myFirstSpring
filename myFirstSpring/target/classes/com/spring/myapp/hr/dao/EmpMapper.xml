@@ -9,4 +9,21 @@
 		WHERE department_id = #{deptid}
 	</if>
 </select>
-</mapper>
+<select id ="getEmplist" resultMap="empMap">
+	SELECT * FROM EMPLOYEES
+</select>
+
+<resultMap type="com.spring.myapp.hr.vo.EmployeeVO" id="empMap">
+	<result column = "EMPLOYEE_ID" property = "employeeId"/>
+	<result column = "FIRST_NAME" property = "firstName"/>
+	<result column = "LAST_NAME" property = "lastName"/>
+	<result column = "EMAIL" property = "email"/>
+	<result column = "PHONE_NUMBER" property = "phoneNumber"/>
+	<result column = "HIRE_DATE" property = "hireDate"/>
+	<result column = "JOB_ID" property = "jobId"/>
+	<result column = "SALARY" property = "salary"/>
+	<result column = "COMMISSION_PCT" property = "commissionPct"/>
+	<result column = "MANAGER_ID" property = "managerId"/>
+	<result column = "DEPARTMENT_ID" property = "departmentId"/>
+</resultMap>
+</mapper> 
