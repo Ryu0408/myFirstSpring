@@ -71,4 +71,12 @@
 	delete FROM job_history WHERE employee_id=#{empid}
 </delete>
 
+<update id="updateEmp" parameterType="com.spring.myapp.hr.vo.EmployeeVO">
+	UPDATE employees 
+		SET FIRST_NAME = #{firstName}, LAST_NAME = #{lastName}, EMAIL= #{email}, 
+		PHONE_NUMBER=#{phoneNumber}, HIRE_DATE=#{hireDate}, JOB_ID=#{jobId}, 
+		SALARY=#{salary}, COMMISSION_PCT=#{commissionPct}, MANAGER_ID=#{managerId}, 
+		DEPARTMENT_ID=#{departmentId} WHERE EMPLOYEE_ID=#{employeeId}
+</update>
+
 </mapper> 
