@@ -3,7 +3,10 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
 <mapper namespace="com.spring.myapp.hr.dao.IEmpDAO">
 
-<select id="getEmpCount" resultType="int">
+<select id="getEmpCount" parameterType="int" resultType="int">
 	SELECT COUNT(*) FROM EMPLOYEES
+	<if test="deptid !=null">
+		WHERE department_id = #{deptid}
+	</if>
 </select>
 </mapper>
